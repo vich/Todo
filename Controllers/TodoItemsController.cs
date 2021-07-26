@@ -57,7 +57,11 @@ namespace TodoApi.Controllers
             }
 
             todoItem.Name = todoItemDTO.Name;
-            todoItem.IsComplete = todoItemDTO.IsComplete;
+            todoItem.DueDate = todoItemDTO.DueDate;
+            todoItem.Priority = todoItemDTO.Priority;
+            todoItem.Status = todoItemDTO.Status;
+            todoItem.City = todoItemDTO.City;
+            todoItem.AssignTo = todoItemDTO.AssignTo;
 
             try
             {
@@ -77,8 +81,12 @@ namespace TodoApi.Controllers
         {
             var todoItem = new TodoItem
             {
-                IsComplete = todoItemDTO.IsComplete,
-                Name = todoItemDTO.Name
+                Name = todoItemDTO.Name,
+                DueDate = todoItemDTO.DueDate,
+                Priority = todoItemDTO.Priority,
+                Status = todoItemDTO.Status,
+                City = todoItemDTO.City,
+                AssignTo = todoItemDTO.AssignTo,
             };
 
             await _context.TodoItems.AddAsync(todoItem);
@@ -115,7 +123,11 @@ namespace TodoApi.Controllers
             {
                 Id = todoItem.Id,
                 Name = todoItem.Name,
-                IsComplete = todoItem.IsComplete
+                DueDate = todoItem.DueDate,
+                Priority = todoItem.Priority,
+                Status = todoItem.Status,
+                City = todoItem.City,
+                AssignTo = todoItem.AssignTo,
             };
     }
 }

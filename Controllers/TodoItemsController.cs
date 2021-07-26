@@ -27,6 +27,7 @@ namespace TodoApi.Controllers
                 .ToListAsync();
         }
 
+        // GET: api/TodoItems/id
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
         {
@@ -40,6 +41,7 @@ namespace TodoApi.Controllers
             return ItemToDTO(todoItem);
         }
 
+        // PUT: api/TodoItems/id
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
         {
@@ -69,6 +71,7 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
+        // POST: api/TodoItems
         [HttpPost]
         public async Task<ActionResult<TodoItemDTO>> CreateTodoItem(TodoItemDTO todoItemDTO)
         {
@@ -87,6 +90,7 @@ namespace TodoApi.Controllers
                 ItemToDTO(todoItem));
         }
 
+        // DELETE: api/TodoItems/id
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(long id)
         {

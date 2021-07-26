@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -31,7 +32,7 @@ namespace TodoApi.Controllers
 
         // GET: api/TodoItems/id
         [HttpGet("{id}")]
-        public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
+        public async Task<ActionResult<TodoItemDTO>> GetTodoItem(Guid id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);
 
@@ -45,7 +46,7 @@ namespace TodoApi.Controllers
 
         // PUT: api/TodoItems/id
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
+        public async Task<IActionResult> UpdateTodoItem(Guid id, TodoItemDTO todoItemDTO)
         {
             if (id != todoItemDTO.Id)
             {
@@ -102,7 +103,7 @@ namespace TodoApi.Controllers
 
         // DELETE: api/TodoItems/id
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(long id)
+        public async Task<IActionResult> DeleteTodoItem(Guid id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);
 
@@ -117,7 +118,7 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
-        private bool TodoItemExists(long id) =>
+        private bool TodoItemExists(Guid id) =>
             _context.TodoItems.Any(e => e.Id == id);
 
         private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>

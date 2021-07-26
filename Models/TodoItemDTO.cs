@@ -5,7 +5,7 @@ namespace TodoApi.Models
 {
     public class TodoItemDTO
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public DateTime DueDate { get; set; }
         public Priority Priority { get; set; }

@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using TodoApi.Enums;
 
-namespace TodoApi.Models
+namespace TodoApi.Entities
 {
     public class TodoItem
     {

@@ -3,6 +3,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TodoApi.DbContexts;
+using TodoApi.Entities;
 using TodoApi.Models;
 
 namespace TodoApi.Controllers

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TodoApi.DbContexts;
+using TodoApi.Services;
 
 namespace TodoApi
 {
@@ -25,7 +26,9 @@ namespace TodoApi
             {
                 setupAction.ReturnHttpNotAcceptable = true;
             }).AddXmlDataContractSerializerFormatters();
-           
+
+            services.AddScoped<ITodoRepository, TodoRepository>();
+
             services.AddDbContext<TodoContext>(options =>
             {
                 options.UseSqlServer(

@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TodoApi.DbContexts;
-using TodoApi.Models;
 
 namespace TodoApi
 {
@@ -27,10 +26,11 @@ namespace TodoApi
                 setupAction.ReturnHttpNotAcceptable = true;
             }).AddXmlDataContractSerializerFormatters();
            
-            //for development
-            services.AddDbContext<TodoContext>(opt =>
-                opt.UseInMemoryDatabase("TodoList"));
-            
+            services.AddDbContext<TodoContext>(options =>
+            {
+                options.UseSqlServer(
+                    @"Server=(localdb)\mssqllocaldb;Database=TestLibraryDB;Trusted_Connection=True;");
+            });
             //services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "TodoApi", Version = "v1"}); });
         }
 

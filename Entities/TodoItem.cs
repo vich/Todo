@@ -25,7 +25,5 @@ namespace TodoApi.Entities
         
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string AssignTo { get; set; }
-        
-        public string Secret { get; set; }
     }
 }

@@ -23,15 +23,31 @@ namespace TodoApi.Controllers
 
         // GET: api/TodoItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
+        public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems(
+            [FromQuery(Name = "City")] string city, [FromQuery(Name = "AssignedTo")] string assignedTo)
         {
-            return await _context.TodoItems
+            var collection = _context.TodoItems as IQueryable<TodoItem>;
+            
+            if (!string.IsNullOrWhiteSpace(city))
+            {
+                city = city.Trim();
+                collection = collection
+                    .Where(x => x.City == city);
+            }
+            else if (!string.IsNullOrWhiteSpace(assignedTo))
+            {
+                assignedTo = assignedTo.Trim();
+                collection = collection
+                    .Where(x => x.AssignTo == assignedTo);
+            }
+
+            return await collection
                 .Select(x => ItemToDTO(x))
                 .ToListAsync();
         }
 
         // GET: api/TodoItems/id
-        [HttpGet("{id}")]
+        [HttpGet("{id:guid}")]
         public async Task<ActionResult<TodoItemDTO>> GetTodoItem(Guid id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);
@@ -45,7 +61,7 @@ namespace TodoApi.Controllers
         }
 
         // PUT: api/TodoItems/id
-        [HttpPut("{id}")]
+        [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateTodoItem(Guid id, TodoItemDTO todoItemDTO)
         {
             if (id != todoItemDTO.Id)
@@ -84,6 +100,7 @@ namespace TodoApi.Controllers
         {
             var todoItem = new TodoItem
             {
+                Id = new Guid(),
                 Name = todoItemDTO.Name,
                 DueDate = todoItemDTO.DueDate,
                 Priority = todoItemDTO.Priority,
@@ -102,7 +119,7 @@ namespace TodoApi.Controllers
         }
 
         // DELETE: api/TodoItems/id
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteTodoItem(Guid id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);

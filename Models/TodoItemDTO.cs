@@ -12,6 +12,5 @@ namespace TodoApi.Models
         public Status Status { get; set; }
         public string City { get; set; }
         public string AssignTo { get; set; }
-        public bool IsComplete { get; set; }
     }
 }

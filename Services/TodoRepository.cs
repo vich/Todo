@@ -41,7 +41,8 @@ namespace TodoApi.Services
                 collection = collection
                     .Where(x => x.City == city);
             }
-            else if (!string.IsNullOrWhiteSpace(assignedTo))
+            
+            if (!string.IsNullOrWhiteSpace(assignedTo))
             {
                 assignedTo = assignedTo.Trim();
                 collection = collection

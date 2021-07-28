@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Entities;
@@ -15,10 +15,15 @@ namespace TodoApi.Controllers
     public class TodoItemsController : ControllerBase
     {
         private readonly ITodoRepository _todoRepository;
+        private readonly IMapper _mapper;
 
-        public TodoItemsController(ITodoRepository todoRepository)
+        public TodoItemsController(ITodoRepository todoRepository, IMapper mapper)
         {
-            _todoRepository = todoRepository ?? throw new ArgumentNullException(nameof(todoRepository));
+            _todoRepository = todoRepository ??
+                              throw new ArgumentNullException(nameof(todoRepository));
+
+            _mapper = mapper ??
+                      throw new ArgumentNullException(nameof(mapper));
         }
 
         // GET: api/TodoItems
@@ -28,7 +33,7 @@ namespace TodoApi.Controllers
         {
             var collection = await _todoRepository.GetTodoItems(city, assignedTo);
 
-            return collection.Select(ItemToDTO).ToList();
+            return Ok(_mapper.Map<IEnumerable<TodoItemDTO>>(collection));
         }
 
         // GET: api/TodoItems/id
@@ -41,7 +46,7 @@ namespace TodoApi.Controllers
             }
 
             var todoItem = await _todoRepository.GeTodoItem(id);
-            return ItemToDTO(todoItem);
+            return Ok(_mapper.Map<TodoItemDTO>(todoItem));
         }
 
         // PUT: api/TodoItems/id
@@ -91,10 +96,11 @@ namespace TodoApi.Controllers
             await _todoRepository.AddTodo(todoItem);
             await _todoRepository.Save();
 
+            var itemToReturn = _mapper.Map<TodoItemDTO>(todoItem);
             return CreatedAtAction(
                 nameof(GetTodoItem),
                 new {id = todoItem.Id},
-                ItemToDTO(todoItem));
+                itemToReturn);
         }
 
         // DELETE: api/TodoItems/id
@@ -113,16 +119,16 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
-        private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>
-            new()
-            {
-                Id = todoItem.Id,
-                Name = todoItem.Name,
-                DueDate = todoItem.DueDate,
-                Priority = todoItem.Priority,
-                Status = todoItem.Status,
-                City = todoItem.City,
-                AssignTo = todoItem.AssignTo,
-            };
+        // private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>
+        //     new()
+        //     {
+        //         Id = todoItem.Id,
+        //         Name = todoItem.Name,
+        //         DueDate = todoItem.DueDate,
+        //         Priority = todoItem.Priority,
+        //         Status = todoItem.Status,
+        //         City = todoItem.City,
+        //         AssignTo = todoItem.AssignTo,
+        //     };
     }
 }

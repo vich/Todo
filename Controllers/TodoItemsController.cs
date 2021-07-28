@@ -65,6 +65,7 @@ namespace TodoApi.Controllers
 
             var todoItemFromRepo = await _todoRepository.GeTodoItem(id);
             _mapper.Map(todoItemDTO, todoItemFromRepo);
+            await _todoRepository.UpdateTodo(todoItemFromRepo);
 
             try
             {

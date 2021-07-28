@@ -63,8 +63,8 @@ namespace TodoApi.Controllers
                 return NotFound();
             }
 
-            var todoItem = await _todoRepository.GeTodoItem(id);
-            await _todoRepository.UpdateTodo(todoItem);
+            var todoItemFromRepo = await _todoRepository.GeTodoItem(id);
+            _mapper.Map(todoItemDTO, todoItemFromRepo);
 
             try
             {
@@ -118,17 +118,5 @@ namespace TodoApi.Controllers
 
             return NoContent();
         }
-
-        // private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>
-        //     new()
-        //     {
-        //         Id = todoItem.Id,
-        //         Name = todoItem.Name,
-        //         DueDate = todoItem.DueDate,
-        //         Priority = todoItem.Priority,
-        //         Status = todoItem.Status,
-        //         City = todoItem.City,
-        //         AssignTo = todoItem.AssignTo,
-        //     };
     }
 }

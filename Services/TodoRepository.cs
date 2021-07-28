@@ -66,19 +66,7 @@ namespace TodoApi.Services
 
         public async Task UpdateTodo(TodoItem todo)
         {
-            if (todo == null)
-            {
-                throw new ArgumentNullException(nameof(todo));
-            }
-
-            var storedItem = await GeTodoItem(todo.Id);
-
-            storedItem.Name = todo.Name;
-            storedItem.DueDate = todo.DueDate;
-            storedItem.Priority = todo.Priority;
-            storedItem.Status = todo.Status;
-            storedItem.City = todo.City;
-            storedItem.AssignTo = todo.AssignTo;
+            // no code in this implementation
         }
 
         public void DeleteTodo(TodoItem todo)

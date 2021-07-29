@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Entities;
-using TodoApi.Models;
-using TodoApi.Services;
+using Todo.Api.Entities;
+using Todo.Api.Models;
+using Todo.Api.Services;
 
-namespace TodoApi.Controllers
+namespace Todo.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

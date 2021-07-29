@@ -1,4 +1,4 @@
-namespace TodoApi.Enums
+namespace Todo.Api.Enums
 {
     public enum Priority
     {

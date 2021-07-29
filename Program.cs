@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using TodoApi.DbContexts;
+using Todo.Api.DbContexts;
 
-namespace TodoApi
+namespace Todo.Api
 {
     public class Program
     {

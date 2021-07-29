@@ -1,9 +1,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Entities;
-using TodoApi.Enums;
+using Todo.Api.Entities;
+using Todo.Api.Enums;
 
-namespace TodoApi.DbContexts
+namespace Todo.Api.DbContexts
 {
     public class TodoContext : DbContext
     {

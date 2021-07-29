@@ -1,8 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using TodoApi.Enums;
+using Todo.Api.Enums;
 
-namespace TodoApi.Entities
+namespace Todo.Api.Entities
 {
     public class TodoItem
     {

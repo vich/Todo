@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace TodoApi.Profiles
+namespace Todo.Api.Profiles
 {
     public class TodoProfile : Profile
     {

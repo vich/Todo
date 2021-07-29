@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TodoApi.DbContexts;
-using TodoApi.Services;
+using Todo.Api.DbContexts;
+using Todo.Api.Services;
 
-namespace TodoApi
+namespace Todo.Api
 {
     public class Startup
     {

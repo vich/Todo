@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Api", "Todo.Api\Todo.Api.csproj", "{85587803-C0EB-42D9-AB1F-601E14F764C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Api", "Todo.Api\Todo.Api.csproj", "{85587803-C0EB-42D9-AB1F-601E14F764C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.OAuth", "Todo.OAuth\Todo.OAuth.csproj", "{5FF92E52-4770-4904-8465-B41431CECCA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndentityServer4", "IndentityServer4\IndentityServer4.csproj", "{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{85587803-C0EB-42D9-AB1F-601E14F764C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85587803-C0EB-42D9-AB1F-601E14F764C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85587803-C0EB-42D9-AB1F-601E14F764C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FF92E52-4770-4904-8465-B41431CECCA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FF92E52-4770-4904-8465-B41431CECCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FF92E52-4770-4904-8465-B41431CECCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FF92E52-4770-4904-8465-B41431CECCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

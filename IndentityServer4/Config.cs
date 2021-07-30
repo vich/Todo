@@ -63,7 +63,8 @@ namespace IndentityServer4
                     AllowedGrantTypes = new []
                     {
                         GrantType.ResourceOwnerPassword
-                    }
+                    },
+                    AccessTokenLifetime = 60*24 //24 hours
                 }
             };
     }

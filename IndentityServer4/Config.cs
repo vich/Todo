@@ -52,6 +52,19 @@ namespace IndentityServer4
                     AllowOfflineAccess = true,
                     AllowedScopes = { "openid", "profile", "api1" }
                 },
+                new Client
+                {
+                    AllowedScopes = { "openid", "profile", "api1" },
+                    ClientId = "Postman",
+                    ClientSecrets = new []
+                    {
+                        new Secret("password".Sha256()),
+                    },
+                    AllowedGrantTypes = new []
+                    {
+                        GrantType.ResourceOwnerPassword
+                    }
+                }
             };
     }
 }

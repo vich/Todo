@@ -94,7 +94,7 @@ namespace Todo.Api.Services
         {
             if (disposing)
             {
-                // dispose resources when needed
+                _context.Dispose();
             }
         }
     }

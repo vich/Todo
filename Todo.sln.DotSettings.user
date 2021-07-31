@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2af4b85b_002Da794_002D4b86_002D888d_002Db69b0a294d28/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TodoExistsTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F144544-2FFB-4331-953E-91936E5C7520::net5.0::Todo.Api.Test.TodoRepositoryTest.TodoExistsTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F144544-2FFB-4331-953E-91936E5C7520::net5.0::Todo.Api.Test.TodoRepositoryTest.TodoNotExistsTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F144544-2FFB-4331-953E-91936E5C7520::net5.0::Todo.Api.Test.TodoRepositoryTest.GetTodoItemsTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F144544-2FFB-4331-953E-91936E5C7520::net5.0::Todo.Api.Test.TodoRepositoryTest.AddTodoTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F144544-2FFB-4331-953E-91936E5C7520::net5.0::Todo.Api.Test.TodoRepositoryTest.AddNullTodoTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F144544-2FFB-4331-953E-91936E5C7520::net5.0::Todo.Api.Test.TodoRepositoryTest.DeleteTodoTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F144544-2FFB-4331-953E-91936E5C7520::net5.0::Todo.Api.Test.TodoRepositoryTest.DeleteNullTodoTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

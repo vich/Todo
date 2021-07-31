@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Api", "Todo.Api\Todo.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndentityServer4", "IndentityServer4\IndentityServer4.csproj", "{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Api.Test", "Todo.Api.Test\Todo.Api.Test.csproj", "{1F144544-2FFB-4331-953E-91936E5C7520}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACEFC79B-3585-4D90-9FC2-EE66C69B1ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F144544-2FFB-4331-953E-91936E5C7520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F144544-2FFB-4331-953E-91936E5C7520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F144544-2FFB-4331-953E-91936E5C7520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F144544-2FFB-4331-953E-91936E5C7520}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

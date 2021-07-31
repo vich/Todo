@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\IndentityServer4",
+    "\\IndentityServer4\\Properties",
+    "\\IndentityServer4\\Quickstart",
+    "\\Todo.Api",
+    "\\Todo.Api.Test",
+    "\\Todo.Api\\Controllers",
+    "\\Todo.Api\\Properties",
+    "\\Todo.Api\\Services"
+  ],
+  "SelectedNode": "\\Todo.Api.Test\\TodoRepositoryTest.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Todo.Api.DbContexts;
 
-namespace TodoApi.Migrations
+namespace Todo.Api.Migrations
 {
     [DbContext(typeof(TodoContext))]
     partial class TodoContextModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace TodoApi.Migrations
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TodoApi.Entities.TodoItem", b =>
+            modelBuilder.Entity("Todo.Api.Entities.TodoItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -55,7 +55,7 @@ namespace TodoApi.Migrations
                             Id = new Guid("36a12bfa-d2c4-4dc9-9906-eae63b4319a0"),
                             AssignTo = "a1@gmail.com",
                             City = "city1",
-                            DueDate = new DateTime(2021, 7, 28, 0, 38, 48, 55, DateTimeKind.Local).AddTicks(5786),
+                            DueDate = new DateTime(2021, 7, 31, 22, 56, 57, 445, DateTimeKind.Local).AddTicks(6129),
                             Name = "Todo 1",
                             Priority = 2,
                             Status = 1
@@ -65,7 +65,7 @@ namespace TodoApi.Migrations
                             Id = new Guid("36a12bfa-1111-2222-3333-eae63b4319a0"),
                             AssignTo = "a2@gmail.com",
                             City = "city2",
-                            DueDate = new DateTime(2021, 7, 28, 0, 38, 48, 57, DateTimeKind.Local).AddTicks(4992),
+                            DueDate = new DateTime(2021, 7, 31, 22, 56, 57, 447, DateTimeKind.Local).AddTicks(134),
                             Name = "Todo 2",
                             Priority = 0,
                             Status = 0

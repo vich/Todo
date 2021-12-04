@@ -101,7 +101,7 @@ namespace Todo.Api
             services.AddDbContext<TodoContext>(options =>
             {
                 options.UseSqlServer(
-                    @"Server=(localdb)\mssqllocaldb;Database=TestLibraryDB;Trusted_Connection=True;");
+                    @"Server=(localdb)\mssqllocaldb;Database=TodoDB;Trusted_Connection=True;");
             });
             //services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "TodoApi", Version = "v1"}); });
         }

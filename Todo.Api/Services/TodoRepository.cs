@@ -16,6 +16,7 @@ namespace Todo.Api.Services
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
+
         public async Task<bool> TodoExists(Guid guid)
         {
             return await _context.TodoItems.AnyAsync(t => t.Id == guid);

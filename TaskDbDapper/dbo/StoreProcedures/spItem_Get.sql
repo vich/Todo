@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[spItem_Get]
-	@Id int
+	@Id UNIQUEIDENTIFIER
 AS
 begin
 	select *
